@@ -38,6 +38,7 @@ internal class FlutterEditText(context: Context, id: Int, @Nullable creationPara
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
           if (!s.toString().equals(lastText)) {
             eventSink?.success(s.toString())
+            lastText = s.toString()
 
 
           }
